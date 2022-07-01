@@ -15,7 +15,7 @@ public class MenuCarta extends Menu {
     private double porcentajeAdicional;
 
     public void establecerPorcentajeAdicional(double p) {
-        porcentajeAdicional = (p * obtenerValorMenu()) / 100;;
+        porcentajeAdicional = (p * obtenerValorInicialMenu()) / 100;;
     }
 
     @Override

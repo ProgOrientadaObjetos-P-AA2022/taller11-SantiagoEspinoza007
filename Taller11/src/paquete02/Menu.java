@@ -35,7 +35,7 @@ public abstract class Menu {
         return valorMenu;
     }
 
-    public double obtenerValorInicialM() {
+    public double obtenerValorInicialMenu() {
         return valorInicialMenu;
     }
 
@@ -44,7 +44,7 @@ public abstract class Menu {
         String c = String.format("Nombre del plato: %s\n"
                 + "Valor del menu inicial: %.2f\n",
                  obtenerNombPlato(),
-                 obtenerValorInicialM());
+                 obtenerValorInicialMenu());
         return c;
     }
 }
