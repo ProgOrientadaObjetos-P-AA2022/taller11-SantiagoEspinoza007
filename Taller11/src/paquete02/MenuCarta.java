@@ -14,26 +14,6 @@ public class MenuCarta extends Menu {
     private double valorBebida;
     private double porcentajeAdicional;
 
-    public double obtenerValorPorcionGuarnicio() {
-        return valorPorcionGuarnicio;
-    }
-
-    public void establecerValorPorcionGuarnicio(double v) {
-        valorPorcionGuarnicio = v;
-    }
-
-    public double obtenerValorBebida() {
-        return valorBebida;
-    }
-
-    public void establecerValorBebida(double v) {
-        valorBebida = v;
-    }
-
-    public double obtenerPorcentajeAdicional() {
-        return porcentajeAdicional;
-    }
-
     public void establecerPorcentajeAdicional(double p) {
         porcentajeAdicional = (p * obtenerValorMenu()) / 100;;
     }
@@ -42,6 +22,26 @@ public class MenuCarta extends Menu {
     public void establecerValorCancelarTotal() {
         valorMenu = (valorInicialMenu + valorPorcionGuarnicio + valorBebida)
                 + porcentajeAdicional;
+    }
+
+    public void establecerValorPorcionGuarnicion(double v) {
+        valorPorcionGuarnicio = v;
+    }
+
+    public void establecerValorBebida(double v) {
+        valorBebida = v;
+    }
+
+    public double obtenerValorPorcionGuarnicion() {
+        return valorPorcionGuarnicio;
+    }
+
+    public double obtenerValorBebida() {
+        return valorBebida;
+    }
+
+    public double obtenerPorcentajeAdicional() {
+        return porcentajeAdicional;
     }
 
     @Override
@@ -54,9 +54,9 @@ public class MenuCarta extends Menu {
                 + "Valor bebida: %.2f\n"
                 + "Porcentaje Adicional: %.2f\n",
                 cadena,
-                valorPorcionGuarnicio,
-                valorBebida,
-                porcentajeAdicional);
+                obtenerValorPorcionGuarnicion(),
+                obtenerValorBebida(),
+                obtenerPorcentajeAdicional());
         return cadena;
     }
 

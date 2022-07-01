@@ -18,16 +18,16 @@ import paquete02.MenuNinos;
  */
 public class Principal {    
      public static void main(String[] args) {
-        ArrayList<Menu> menus = new ArrayList<>();
+        ArrayList<Menu> menu = new ArrayList<>();
         Cuenta c = new Cuenta();
 
-        c.setMenu(menus);
+        c.setMenu(menu);
         c.setNombreCliente("Cristian McGuire");
         
         MenuCarta mC = new MenuCarta();
         mC.establecerNomPlato("Arroz marinero");
         mC.establecerValorInicialM(5);
-        mC.establecerValorPorcionGuarnicio(4.50);
+        mC.establecerValorPorcionGuarnicion(4.50);
         mC.establecerValorBebida(1);
         mC.establecerPorcentajeAdicional(15);
         mC.establecerValorCancelarTotal();
@@ -58,11 +58,11 @@ public class Principal {
         mE.establecerDescuento(20);
         mE.establecerValorCancelarTotal();
 
-        menus.add(mC);
-        menus.add(mD);
-        menus.add(mN1);
-        menus.add(mN2);
-        menus.add(mE);
+        menu.add(mC);
+        menu.add(mD);
+        menu.add(mN1);
+        menu.add(mN2);
+        menu.add(mE);
         
         c.setIva();
         c.setValorCancelar();
