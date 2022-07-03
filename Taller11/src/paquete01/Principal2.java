@@ -85,7 +85,18 @@ public class Principal2 {
             mC.establecerValorPorcionGuarnicion(vGuarnicion);
             mC.establecerValorBebida(vBebida);
             mC.establecerPorcentajeAdicional(pAdicional);
-            l.add(mC);
+            l.add(mC);          
         }
+    for (int i = 0; i < l.size(); i++) {
+            l.get(i).establecerValorCancelarTotal();
+        }
+
+        // Un objeto de tipo Cuenta
+        Cuenta c = new Cuenta();
+        c.setMenu(l);
+        c.setNombreCliente("Luis Andrade");
+        c.setIva();
+        c.setValorCancelar();
+        System.out.printf("%s\n", c);
     }
 }

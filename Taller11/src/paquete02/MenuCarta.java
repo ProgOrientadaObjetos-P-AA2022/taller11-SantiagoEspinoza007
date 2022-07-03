@@ -14,6 +14,15 @@ public class MenuCarta extends Menu {
     private double valorBebida;
     private double porcentajeAdicional;
 
+    public void establecerValorPorcionGuarnicion(double v) {
+        valorPorcionGuarnicio = v;
+    }
+    
+    public void establecerValorBebida(double v) {
+        valorBebida = v;
+    }
+
+    
     public void establecerPorcentajeAdicional(double p) {
         porcentajeAdicional = (p * obtenerValorInicialMenu()) / 100;;
     }
@@ -22,14 +31,6 @@ public class MenuCarta extends Menu {
     public void establecerValorCancelarTotal() {
         valorMenu = (valorInicialMenu + valorPorcionGuarnicio + valorBebida)
                 + porcentajeAdicional;
-    }
-
-    public void establecerValorPorcionGuarnicion(double v) {
-        valorPorcionGuarnicio = v;
-    }
-
-    public void establecerValorBebida(double v) {
-        valorBebida = v;
     }
 
     public double obtenerValorPorcionGuarnicion() {

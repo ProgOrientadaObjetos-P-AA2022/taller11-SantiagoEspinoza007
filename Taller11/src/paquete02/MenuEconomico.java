@@ -9,14 +9,14 @@ package paquete02;
  * @author Edgar Espinoza
  */
 public class MenuEconomico extends Menu {
-    protected double descuento;
-
-    public double obtenerDescuento() {
-        return descuento;
-    }
-
+    private double descuento;
+    
     public void establecerDescuento(double d) {
         descuento = (d * valorInicialMenu) / 100;
+    }
+    
+    public double obtenerDescuento() {
+        return descuento;
     }
 
     @Override
@@ -32,7 +32,7 @@ public class MenuEconomico extends Menu {
         cadena = String.format("%s"
                 + "Descuento: %.2f\n",
                 cadena,
-                descuento*100);
+                descuento);
         return cadena;
     }
 }

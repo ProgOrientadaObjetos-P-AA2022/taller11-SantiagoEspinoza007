@@ -12,16 +12,8 @@ public class MenuNinos extends Menu {
     private double valorHelado;
     private double valorPastel;
 
-    public double obtenerValorHelado() {
-        return valorHelado;
-    }
-
     public void establecerValorHelado(double v) {
         valorHelado = v;
-    }
-
-    public double obtenerValorPastel() {
-        return valorPastel;
     }
 
     public void establecerValorPastel(double v) {
@@ -31,6 +23,14 @@ public class MenuNinos extends Menu {
     @Override
     public void establecerValorCancelarTotal() {
         valorMenu = valorInicialMenu + valorHelado + valorPastel;
+    }
+
+    public double obtenerValorHelado() {
+        return valorHelado;
+    }
+
+    public double obtenerValorPastel() {
+        return valorPastel;
     }
 
     @Override

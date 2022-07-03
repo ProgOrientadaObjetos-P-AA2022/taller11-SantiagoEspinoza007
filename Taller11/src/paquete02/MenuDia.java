@@ -13,16 +13,8 @@ public class MenuDia extends Menu {
     private double valorPostre;
     private double valorBebida;
 
-    public double obtenerValorPostre() {
-        return valorPostre;
-    }
-
     public void establecerValorPostre(double v) {
         valorPostre = v;
-    }
-
-    public double obtenerValorBebida() {
-        return valorBebida;
     }
 
     public void establecerValorBebida(double v) {
@@ -32,6 +24,14 @@ public class MenuDia extends Menu {
     @Override
     public void establecerValorCancelarTotal() {
         valorMenu = valorInicialMenu + valorPostre + valorBebida;
+    }
+
+    public double obtenerValorPostre() {
+        return valorPostre;
+    }
+
+    public double obtenerValorBebida() {
+        return valorBebida;
     }
 
     @Override
